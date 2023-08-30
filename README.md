@@ -56,7 +56,7 @@ print("Final test error is", data['sgd']['dynamics'][-1]['test']['err'])
 
 ## Tuto: sweeping over many parameters
 
-Install [grid](https://anonymous.4open.science/r/grid-E629/README.md) and the current repository (`SGD_learning_regimes`).
+Install [grid](https://anonymous.4open.science/r/grid-E629/README.md) and the current repository (`regimes_of_SGD`).
 Execute the following line that makes a sweep along the parameter `dt`, note that `grid` accept python code to create the list of parameters to sweep along.
 
 ```
