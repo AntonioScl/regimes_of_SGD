@@ -89,12 +89,12 @@ Fully-connected on MNIST
 python -m grid FC_small_margin "python -m edm --dataset mnist_parity --pte 32768 --arch mlp --act gelu --L 5 --h 128 --max_wall 40000 --loss hinge --dynamics sgd --alpha 32768 --ptr 32768 --ckpt_grad_stats 128" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(11)]" --dt "[2**i for i in range(-11, 12)]"
 ```
 ```
-#python -m grid FC_margin_one  "python -m edm --dataset mnist_parity --pte 32768 --arch mlp --act gelu --L 5 --h 128 --max_wall 40000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 1 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(0, 13)]" --dt "[2**i for i in range(-5,8)]"
+python -m grid FC_margin_one  "python -m edm --dataset mnist_parity --pte 32768 --arch mlp --act gelu --L 5 --h 128 --max_wall 40000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 1 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(0, 13)]" --dt "[2**i for i in range(-5,8)]"
 ```
 
 CNN on CIFAR
 ```
-#python -m grid CNN_small_margin "python -m edm --dataset cifar_animal --pte 32768 --arch mnas --act relu --L 1 --h 32 --max_wall 80000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 32768 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(11)]" --dt "[2**i for i in range(-6,11)]"
+python -m grid CNN_small_margin "python -m edm --dataset cifar_animal --pte 32768 --arch mnas --act relu --L 1 --h 32 --max_wall 80000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 32768 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(11)]" --dt "[2**i for i in range(-6,11)]"
 ```
 ```
 python -m grid CNN_margin_one "python -m edm --dataset cifar_animal --pte 32768 --arch mnas --act relu --L 1 --h 32 --max_wall 160000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 1 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(12)]" --dt "[2**i for i in range(-7,10)]"
