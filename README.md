@@ -77,11 +77,11 @@ See more info on how to sweep and load runs using grid in the [readme](https://a
 # Phase diagrams learning rate - batch size
 Perceptron with Gaussian data
 ```
-python -m grid perceptron_chi0 "python -m edm --arch linear --alpha 128 --dataset depleted_sign --pte 32768 --loss hinge --dynamics sgd --max_wall 10000 --h 1 --data_chi 0.0 --d 128 --ptr 8192" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(0, 14)]" --dt "[2**i for i in range(-5, 14)]"
+python -m grid perceptron_chi0 "python -m edm --arch linear --alpha 128 --dataset depleted_sign --pte 32768 --loss hinge --dynamics sgd --max_wall 10000 --data_chi 0.0 --d 128 --ptr 8192" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(0, 14)]" --dt "[2**i for i in range(-5, 14)]"
 ```
 Perceptron with data with depletion exponent chi=1
 ```
-python -m grid perceptron_chi1 "python -m edm --arch linear --alpha 128 --dataset depleted_sign --pte 32768 --loss hinge --dynamics sgd --max_wall 10000 --h 1 --data_chi 1.0 --d 128 --ptr 8192" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(0, 14)]" --dt "[2**i for i in range(-10, 13)]"
+python -m grid perceptron_chi1 "python -m edm --arch linear --alpha 128 --dataset depleted_sign --pte 32768 --loss hinge --dynamics sgd --max_wall 10000 --data_chi 1.0 --d 128 --ptr 8192" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(0, 14)]" --dt "[2**i for i in range(-10, 13)]"
 ```
 
 Fully-connected on MNIST
@@ -94,8 +94,8 @@ python -m grid FC_margin_one  "python -m edm --dataset mnist_parity --pte 32768 
 
 CNN on CIFAR
 ```
-python -m grid CNN_small_margin "python -m edm --dataset cifar_animal --pte 32768 --arch mnas --act relu --L 1 --h 32 --max_wall 80000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 32768 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(11)]" --dt "[2**i for i in range(-6,11)]"
+python -m grid CNN_small_margin "python -m edm --dataset cifar_animal --pte 32768 --arch mnas --act relu --h 32 --max_wall 80000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 32768 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(11)]" --dt "[2**i for i in range(-6,11)]"
 ```
 ```
-python -m grid CNN_margin_one "python -m edm --dataset cifar_animal --pte 32768 --arch mnas --act relu --L 1 --h 32 --max_wall 160000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 1 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(12)]" --dt "[2**i for i in range(-7,10)]"
+python -m grid CNN_margin_one "python -m edm --dataset cifar_animal --pte 32768 --arch mnas --act relu --h 32 --max_wall 160000 --loss hinge --dynamics sgd --ckpt_grad_stats 128 --alpha 1 --ptr 16384" --seed_init "[i for i in range(5)]" --bs "[2**i for i in range(12)]" --dt "[2**i for i in range(-7,10)]"
 ```
