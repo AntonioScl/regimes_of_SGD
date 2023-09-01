@@ -24,7 +24,7 @@ A list of some of the paramters:
 `--dynamics`   training dynamics  
 `--bs`  batch size for `sgd` dynamics  
 `--dt`   learning rate  
-`--temp`   temperature, defined as `dt/(bs * h)` (it is alternative to defining the learning rate)  
+`--temp`   temperature, defined as `dt/(bs * h)` (it is alternative to defining the learning rate)       
 `--ckpt_grad_stats`     number of train (test) points to compute the Gram matrix of the neural tangent kernel  
 `--max_wall`     maximum wall time (in seconds)  
 `--seed_init`  initialization seed  
