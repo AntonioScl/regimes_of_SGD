@@ -15,7 +15,7 @@ A list of some of the paramters:
 `--arch`    architecture  
 `--act`    activation function  
 `--h`    width  
-`--L`   depth for `mlp` architecture, i.e. number of hidden layers
+`--L`   depth for `mlp` architecture, i.e. number of hidden layers 
 `--alpha`   initialization scale, is the inverse of the hinge loss margin
 `--dataset`   dataset  
 `--ptr`   number of training points  
